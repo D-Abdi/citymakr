@@ -6,9 +6,10 @@ $(document).ready(function () {
       var x = e.pageX;
       var y = e.pageY;
 
-      $("<div>")
+      $("<div></div>")
         .css({ top: y, left: x })
         .addClass("base")
+        .attr("id", x.toString() + y.toString())
         .append(
           $("<div></div>")
             .addClass("sub1")
@@ -29,13 +30,22 @@ $(document).ready(function () {
 
       $(".slider").roundSlider({
         sliderType: "min-range",
-        value: 80,
+        value: 0,
+        max: 360,
         svgMode: true,
+        pathColor: "#eee",
+        borderColor: "#e8e8f3",
+        startAngle: "0",
+        startAngle: "270",
+        drag: function(event) {
+          $("#" + x + y)
+            .css('transform', '')
+            .css('transform', `rotate(${event.value}deg)`);
+        }
       });
     }
   });
-  $(this).on("mouseup", ".base", function (e) {
-    console.log(e, "MOUSE UP EEE");
+  $(this).on("click", function (e) {
     $(this).closest(".base").remove();
   });
 });
