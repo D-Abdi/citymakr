@@ -1,0 +1,109 @@
+.base {
+  background: #e8e8f3;
+  border-radius: 100%;
+  top: -150%;
+  left: -175%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  position: absolute;
+  transform: translate(-50%, -50%); /* optional */
+  background-image: url("https://bassets.github.io/close.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 20px 20px;
+  background-size: 40px;
+
+}
+
+.radial {
+  position: absolute;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+  -7px -7px 20px rgba(255, 255, 255, 1),
+  inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+  inset 7px 7px 15px rgba(55, 84, 170, 0),
+  inset -7px -7px 20px rgba(255, 255, 255, 0),
+  0px 0px 4px rgba(255, 255, 255, 0);
+  top: -110%;
+  left: -110%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 10px solid #e8e8f3;
+}
+
+.sub1 {
+  position: absolute;
+  background: #e8e8f3;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  background: url("https://bassets.github.io/cam.svg") no-repeat 50%/50% #e8e8f3;
+  opacity: 0;
+  transition: 0.25s ease all;
+}
+
+.sub2 {
+  position: absolute;
+  background: #e8e8f3;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  background: url("https://bassets.github.io/music.svg") no-repeat 50% 45%/50%
+    45% #e8e8f3;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+
+.sub3 {
+  position: absolute;
+  background: #e8e8f3;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+  background: url("https://bassets.github.io/img.svg") no-repeat 50%/ 50% #e8e8f3;
+  opacity: 0;
+  transition: 0.75s ease all;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.rs-container {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+}
+
+h2 {
+  z-index: 10; /* optional */ /* This always keeps the title on top*/
+  position: absolute;
+}
+
+body {
+  background-color: #e8e8f3;
+}
