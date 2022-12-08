@@ -29,7 +29,7 @@ $(document).ready(function () {
             .addClass("sub3")
             .animate({ opacity: "1", top: "200%", left: "200%" }, "fast"),
         )
-        .append($("<div></div>").addClass("slider"))
+        .append($("<div></div>").addClass("slider").attr("id", `slider-${idString}`))
         .appendTo("body");
 
       $(".slider").roundSlider({
@@ -42,22 +42,23 @@ $(document).ready(function () {
         startAngle: "0",
         startAngle: "270",
         drag: function(event) {
-          $(`#${x.toString() + y.toString()}`)
+          $(`#${selected}`)
             .css('transform', '')
             .css('transform', `rotate(${event.value}deg)`);
         }
-      });
-      elementCount++
+        });
     } else {
-      let idPath = e.originalEvent.path;
-      let foundId = idPath.find(x => x.id).id;
+      const idPath = e.originalEvent.path;
+      const foundId = idPath.find(x => x.id && !x.id.startsWith("slider")).id;
       if (foundId) {
         selected = foundId;
-        console.log(selected);
+        $(`#slider-${selected}`).roundSlider({
+          max: 360,
+        })
       }
     }
   });
-  $(this).on("click", function (e) {
+  $(`${selected}`).on("click", function (e) {
     $(this).closest(".base").remove();
   });
 });
