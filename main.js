@@ -58,7 +58,7 @@ $(document).ready(function () {
       }
     }
   });
-  $(`${selected}`).on("click", function (e) {
-    $(this).closest(".base").remove();
+  $(`#${selected}`).on("mousedown", function (e) {
+    $(`#${selected}`).closest(".base").remove();
   });
 });
